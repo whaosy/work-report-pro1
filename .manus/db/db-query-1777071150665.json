@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS `employee_sessions` (`id` bigint AUTO_INCREMENT NOT NULL, `employee_id` bigint NOT NULL, `token` varchar(256) NOT NULL, `expires_at` datetime NOT NULL, `created_at` timestamp NOT NULL DEFAULT (now()), CONSTRAINT `employee_sessions_id` PRIMARY KEY(`id`), CONSTRAINT `employee_sessions_token_unique` UNIQUE(`token`))",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway06.us-east-1.prod.aws.tidbcloud.com --port 4000 --user RcaMciW8skyNbcR.root --database Wig3yWN35WvbyngpZmXdQC --execute CREATE TABLE IF NOT EXISTS `employee_sessions` (`id` bigint AUTO_INCREMENT NOT NULL, `employee_id` bigint NOT NULL, `token` varchar(256) NOT NULL, `expires_at` datetime NOT NULL, `created_at` timestamp NOT NULL DEFAULT (now()), CONSTRAINT `employee_sessions_id` PRIMARY KEY(`id`), CONSTRAINT `employee_sessions_token_unique` UNIQUE(`token`))",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 1734
+}

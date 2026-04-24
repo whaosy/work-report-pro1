@@ -4,35 +4,48 @@ import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import { AuthProvider } from "./contexts/AuthContext";
 import Home from "./pages/Home";
+import Login from "./pages/Login";
+import DailyReport from "./pages/DailyReport";
+import PeriodicReport from "./pages/PeriodicReport";
+import ReportView from "./pages/ReportView";
+import Analytics from "./pages/Analytics";
+import Employees from "./pages/admin/Employees";
+import Departments from "./pages/admin/Departments";
+import Projects from "./pages/admin/Projects";
+import Organizations from "./pages/admin/Organizations";
+import Notifications from "./pages/Notifications";
 
 function Router() {
-  // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/404"} component={NotFound} />
-      {/* Final fallback route */}
+      <Route path="/login" component={Login} />
+      <Route path="/" component={Home} />
+      <Route path="/daily" component={DailyReport} />
+      <Route path="/periodic" component={PeriodicReport} />
+      <Route path="/reports" component={ReportView} />
+      <Route path="/analytics" component={Analytics} />
+      <Route path="/admin/employees" component={Employees} />
+      <Route path="/admin/departments" component={Departments} />
+      <Route path="/admin/projects" component={Projects} />
+      <Route path="/admin/organizations" component={Organizations} />
+      <Route path="/notifications" component={Notifications} />
+      <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>
   );
 }
 
-// NOTE: About Theme
-// - First choose a default theme according to your design style (dark or light bg), than change color palette in index.css
-//   to keep consistent foreground/background color across components
-// - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
-
 function App() {
   return (
     <ErrorBoundary>
-      <ThemeProvider
-        defaultTheme="light"
-        // switchable
-      >
+      <ThemeProvider defaultTheme="light">
         <TooltipProvider>
-          <Toaster />
-          <Router />
+          <Toaster position="top-right" />
+          <AuthProvider>
+            <Router />
+          </AuthProvider>
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>

@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS `projects` (`id` bigint AUTO_INCREMENT NOT NULL, `project_no` varchar(100), `name` varchar(300) NOT NULL, `manager_id` bigint, `organization_id` bigint, `status` enum('discussion','evaluation','development','testing','integration','launch','completed','ended','closed') NOT NULL DEFAULT 'discussion', `business_type` enum('prepaid_card','equity'), `project_type` enum('stock_support','stock_new','new_project','new_merchant','event_support','product_optimization'), `start_date` date, `end_date` date, `estimated_hours` decimal(8,2), `description` text, `created_at` timestamp NOT NULL DEFAULT (now()), `updated_at` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP, CONSTRAINT `projects_id` PRIMARY KEY(`id`))",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway06.us-east-1.prod.aws.tidbcloud.com --port 4000 --user RcaMciW8skyNbcR.root --database Wig3yWN35WvbyngpZmXdQC --execute CREATE TABLE IF NOT EXISTS `projects` (`id` bigint AUTO_INCREMENT NOT NULL, `project_no` varchar(100), `name` varchar(300) NOT NULL, `manager_id` bigint, `organization_id` bigint, `status` enum('discussion','evaluation','development','testing','integration','launch','completed','ended','closed') NOT NULL DEFAULT 'discussion', `business_type` enum('prepaid_card','equity'), `project_type` enum('stock_support','stock_new','new_project','new_merchant','event_support','product_optimization'), `start_date` date, `end_date` date, `estimated_hours` decimal(8,2), `description` text, `created_at` timestamp NOT NULL DEFAULT (now()), `updated_at` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP, CONSTRAINT `projects_id` PRIMARY KEY(`id`))",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 1584
+}

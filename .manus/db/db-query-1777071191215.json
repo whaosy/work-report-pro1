@@ -1,0 +1,9 @@
+{
+  "query": "INSERT INTO employees (employee_no, name, email, phone, password_md5, role, status) VALUES ('admin', '系统管理员', 'admin@company.com', '', '0192023a7bbd73250516f069df18b500', 'admin', 1) ON DUPLICATE KEY UPDATE name=name",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway06.us-east-1.prod.aws.tidbcloud.com --port 4000 --user RcaMciW8skyNbcR.root --database Wig3yWN35WvbyngpZmXdQC --execute INSERT INTO employees (employee_no, name, email, phone, password_md5, role, status) VALUES ('admin', '系统管理员', 'admin@company.com', '', '0192023a7bbd73250516f069df18b500', 'admin', 1) ON DUPLICATE KEY UPDATE name=name",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 1549
+}

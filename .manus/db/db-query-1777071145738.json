@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS `employees` (`id` bigint AUTO_INCREMENT NOT NULL, `employee_no` varchar(50) NOT NULL, `name` varchar(100) NOT NULL, `email` varchar(200), `phone` varchar(50), `password_md5` varchar(32) NOT NULL, `department_id` bigint, `supervisor_id` bigint, `role` enum('member','team_leader','manager','director','admin') NOT NULL DEFAULT 'member', `status` tinyint NOT NULL DEFAULT 1, `created_at` timestamp NOT NULL DEFAULT (now()), `updated_at` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP, CONSTRAINT `employees_id` PRIMARY KEY(`id`), CONSTRAINT `employees_employee_no_unique` UNIQUE(`employee_no`))",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway06.us-east-1.prod.aws.tidbcloud.com --port 4000 --user RcaMciW8skyNbcR.root --database Wig3yWN35WvbyngpZmXdQC --execute CREATE TABLE IF NOT EXISTS `employees` (`id` bigint AUTO_INCREMENT NOT NULL, `employee_no` varchar(50) NOT NULL, `name` varchar(100) NOT NULL, `email` varchar(200), `phone` varchar(50), `password_md5` varchar(32) NOT NULL, `department_id` bigint, `supervisor_id` bigint, `role` enum('member','team_leader','manager','director','admin') NOT NULL DEFAULT 'member', `status` tinyint NOT NULL DEFAULT 1, `created_at` timestamp NOT NULL DEFAULT (now()), `updated_at` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP, CONSTRAINT `employees_id` PRIMARY KEY(`id`), CONSTRAINT `employees_employee_no_unique` UNIQUE(`employee_no`))",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 1637
+}

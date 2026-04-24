@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS `departments` (`id` bigint AUTO_INCREMENT NOT NULL, `name` varchar(200) NOT NULL, `parent_id` bigint, `sort_order` int DEFAULT 0, `status` tinyint NOT NULL DEFAULT 1, `created_at` timestamp NOT NULL DEFAULT (now()), `updated_at` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP, CONSTRAINT `departments_id` PRIMARY KEY(`id`))",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway06.us-east-1.prod.aws.tidbcloud.com --port 4000 --user RcaMciW8skyNbcR.root --database Wig3yWN35WvbyngpZmXdQC --execute CREATE TABLE IF NOT EXISTS `departments` (`id` bigint AUTO_INCREMENT NOT NULL, `name` varchar(200) NOT NULL, `parent_id` bigint, `sort_order` int DEFAULT 0, `status` tinyint NOT NULL DEFAULT 1, `created_at` timestamp NOT NULL DEFAULT (now()), `updated_at` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP, CONSTRAINT `departments_id` PRIMARY KEY(`id`))",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 1650
+}

@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS `project_members` (`id` bigint AUTO_INCREMENT NOT NULL, `project_id` bigint NOT NULL, `employee_id` bigint NOT NULL, `created_at` timestamp NOT NULL DEFAULT (now()), CONSTRAINT `project_members_id` PRIMARY KEY(`id`)); CREATE TABLE IF NOT EXISTS `project_tasks` (`id` bigint AUTO_INCREMENT NOT NULL, `project_id` bigint NOT NULL, `name` varchar(300) NOT NULL, `description` text, `assignee_id` bigint, `estimated_hours` decimal(8,2), `status` enum('pending','in_progress','completed') DEFAULT 'pending', `created_at` timestamp NOT NULL DEFAULT (now()), `updated_at` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP, CONSTRAINT `project_tasks_id` PRIMARY KEY(`id`))",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway06.us-east-1.prod.aws.tidbcloud.com --port 4000 --user RcaMciW8skyNbcR.root --database Wig3yWN35WvbyngpZmXdQC --execute CREATE TABLE IF NOT EXISTS `project_members` (`id` bigint AUTO_INCREMENT NOT NULL, `project_id` bigint NOT NULL, `employee_id` bigint NOT NULL, `created_at` timestamp NOT NULL DEFAULT (now()), CONSTRAINT `project_members_id` PRIMARY KEY(`id`)); CREATE TABLE IF NOT EXISTS `project_tasks` (`id` bigint AUTO_INCREMENT NOT NULL, `project_id` bigint NOT NULL, `name` varchar(300) NOT NULL, `description` text, `assignee_id` bigint, `estimated_hours` decimal(8,2), `status` enum('pending','in_progress','completed') DEFAULT 'pending', `created_at` timestamp NOT NULL DEFAULT (now()), `updated_at` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP, CONSTRAINT `project_tasks_id` PRIMARY KEY(`id`))",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 1937
+}
