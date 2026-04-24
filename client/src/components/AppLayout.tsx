@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { useEmployee, ROLE_LABELS, ROLE_LEVEL } from "@/contexts/AuthContext";
 import { trpc } from "@/lib/trpc";
